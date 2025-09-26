@@ -4,23 +4,36 @@ import PackageDescription
 let packageName = "IDVFaceSDK"
 
 let package = Package(
-    name: "IDVFaceSDK",
-    platforms: [.iOS(.v13)],
+    name: packageName,
+    platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "IDVFaceSDK",
-            targets: ["\(packageName)Common"]),
+            name: packageName,
+            targets: ["\(packageName)Common"]
+        ),
     ],
     dependencies: [
-        .package(name: "IDVModule", url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git", .exact(Version(stringLiteral: "2.5.539"))),
-        .package(name: "FaceSDK", url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git", .exact(Version(stringLiteral: "7.1.2790"))),
+        .package(
+            name: "IDVModule",
+            url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
+            .exact(Version(stringLiteral: "3.1.1203"))
+        ),
+        .package(
+            name: "FaceSDK",
+            url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
+            .exact(Version(stringLiteral: "7.2.3102"))
+        ),
     ],
     targets: [
-        .binaryTarget(name: "IDVFaceSDK", url: "https://pods.regulaforensics.com/IDVFaceSDK/2.5.762/IDVFaceSDK-2.5.762.zip", checksum: "dd3f3dd3fca322e8edbd3c4d8152f5d4e3af18f77e9f99fc1266f0b84b15f5e3"),
+        .binaryTarget(
+            name: packageName,
+            url: "https://pods.regulaforensics.com/\(packageName)/3.1.1703/\(packageName)-3.1.1703.zip",
+            checksum: "8be82b8731492dbe9c1f166c8a9082eab1ce48f16c29f4703ee605cd22b8e8c4"
+        ),
         .target(
             name: "\(packageName)Common",
             dependencies: [
-                .target(name: "IDVFaceSDK"),
+                .target(name: packageName),
                 .product(name: "IDVModule", package: "IDVModule"),
                 .product(name: "FaceSDK", package: "FaceSDK")
             ],
