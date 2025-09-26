@@ -16,12 +16,12 @@ let package = Package(
         .package(
             name: "IDVModule",
             url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
-            .exact(Version(stringLiteral: "3.1.1203"))
+            from: "3.1.1203"
         ),
         .package(
             name: "FaceSDK",
             url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
-            .exact(Version(stringLiteral: "7.2.3102"))
+            from: "7.2.3102"
         ),
     ],
     targets: [
