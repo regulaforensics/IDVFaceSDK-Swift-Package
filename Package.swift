@@ -5,7 +5,9 @@ let packageName = "IDVFaceSDK"
 
 let package = Package(
     name: packageName,
-    platforms: [.iOS(.v14)],
+    platforms: [
+        .iOS(.v14)
+    ],
     products: [
         .library(
             name: packageName,
@@ -16,19 +18,19 @@ let package = Package(
         .package(
             name: "IDVModule",
             url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
-            from: "3.1.1203"
+            from: "3.6.1740"
         ),
         .package(
             name: "FaceSDK",
             url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
-            from: "7.2.3102"
+            from: "8.2.4079"
         ),
     ],
     targets: [
         .binaryTarget(
             name: packageName,
-            url: "https://pods.regulaforensics.com/\(packageName)/3.1.1703/\(packageName)-3.1.1703.zip",
-            checksum: "8be82b8731492dbe9c1f166c8a9082eab1ce48f16c29f4703ee605cd22b8e8c4"
+            url: "https://pods.regulaforensics.com/\(packageName)/3.6.3064/\(packageName)-3.6.3064.zip",
+            checksum: "c6c5241fbb88227e4998d8da4d68eda323956655fcf1ab4b539037e9c684cdc9"
         ),
         .target(
             name: "\(packageName)Common",
