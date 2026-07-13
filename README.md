@@ -98,6 +98,12 @@ https://github.com/regulaforensics/IDVFaceSDK-Swift-Package
 
 5. Click Add Package.
 
+6. Now add the Core package by performing steps 2-5 again for the following URL:
+
+```
+https://github.com/regulaforensics/FaceCoreBasic-Swift-Package
+```
+
 Once you're finished, Xcode will begin downloading and resolving dependencies.
 
 ## Info.plist file setup
