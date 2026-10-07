@@ -1,12 +1,13 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 let packageName = "IDVFaceSDK"
+let binaryTargetName = "IDVFaceSDKStage"
 
 let package = Package(
     name: packageName,
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -18,24 +19,24 @@ let package = Package(
         .package(
             name: "IDVModule",
             url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
-            from: "3.9.1898"
+            from: "3.10.2026-rc"
         ),
         .package(
             name: "FaceSDK",
             url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
-            from: "8.3.4725"
+            from: "8.3.4873-rc"
         ),
     ],
     targets: [
         .binaryTarget(
-            name: packageName,
-            url: "https://pods.regulaforensics.com/\(packageName)/3.9.3582/\(packageName)-3.9.3582.zip",
-            checksum: "8c2867782509bcffa29abb8e2c6979be5a4d1c14effce8b440769af787bb675e"
+            name: binaryTargetName,
+            url: "https://pods.regulaforensics.com/Stage/IDVFaceSDKStage/3.10.3948/IDVFaceSDKStage-3.10.3948.zip",
+            checksum: "47fffee0b25d7712a3e52ad306d095d64f9de0d0f0f48c2ab1c40aab69773873"
         ),
         .target(
             name: "\(packageName)Common",
             dependencies: [
-                .target(name: packageName),
+                .target(name: binaryTargetName),
                 .product(name: "IDVModule", package: "IDVModule"),
                 .product(name: "FaceSDK", package: "FaceSDK")
             ],
