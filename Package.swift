@@ -30,8 +30,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: binaryTargetName,
-            url: "https://pods.regulaforensics.com/Stage/IDVFaceSDKStage/3.10.3949/IDVFaceSDKStage-3.10.3949.zip",
-            checksum: "9a39f5b703e062949d45d817f672743c867c73c28e9e25a63db2452bf404f220"
+            url: "https://pods.regulaforensics.com/Stage/IDVFaceSDKStage/3.10.3951/IDVFaceSDKStage-3.10.3951.zip",
+            checksum: "2722c35df32e1298d8bbad0e0f38d3c2a069180b64a91a2dcb212b8fcc698461"
         ),
         .target(
             name: "\(packageName)Common",
