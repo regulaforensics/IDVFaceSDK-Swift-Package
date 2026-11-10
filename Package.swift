@@ -2,7 +2,7 @@
 import PackageDescription
 
 let packageName = "IDVFaceSDK"
-let binaryTargetName = "IDVFaceSDKStage"
+let binaryTargetName = "IDVFaceSDKNightly"
 
 let package = Package(
     name: packageName,
@@ -19,19 +19,19 @@ let package = Package(
         .package(
             name: "IDVModule",
             url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
-            from: "4.0.2126-rc"
+            from: "4.0.2127-nightly"
         ),
         .package(
             name: "FaceSDK",
             url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
-            from: "8.4.5062-rc"
+            from: "8.5.5248-nightly"
         ),
     ],
     targets: [
         .binaryTarget(
             name: binaryTargetName,
-            url: "https://pods.regulaforensics.com/Stage/IDVFaceSDKStage/4.0.4142/IDVFaceSDKStage-4.0.4142.zip",
-            checksum: "2c47f130c3e56dac2541bbdc3370d697d7ea5178d8c17aa849d3e8ff5a188071"
+            url: "https://pods.regulaforensics.com/Nightly/IDVFaceSDKNightly/4.0.4143/IDVFaceSDKNightly-4.0.4143.zip",
+            checksum: "309d31be8fabb180dd2c499ac49877cb7b5ae7667749da1fb91ee90d263c2d29"
         ),
         .target(
             name: "\(packageName)Common",
