@@ -19,19 +19,19 @@ let package = Package(
         .package(
             name: "IDVModule",
             url: "https://github.com/regulaforensics/IDVModule-Swift-Package.git",
-            from: "4.0.2148-nightly"
+            from: "4.0.2149-nightly"
         ),
         .package(
             name: "FaceSDK",
             url: "https://github.com/regulaforensics/FaceSDK-Swift-Package.git",
-            from: "8.5.5329-nightly"
+            from: "8.5.5335-nightly"
         ),
     ],
     targets: [
         .binaryTarget(
             name: binaryTargetName,
-            url: "https://pods.regulaforensics.com/Nightly/IDVFaceSDKNightly/4.0.4204/IDVFaceSDKNightly-4.0.4204.zip",
-            checksum: "518257ddd2d6480162726a290d12542546aac6abb943fae8a5b2125c661a808b"
+            url: "https://pods.regulaforensics.com/Nightly/IDVFaceSDKNightly/4.0.4213/IDVFaceSDKNightly-4.0.4213.zip",
+            checksum: "fbb3457520e54541a0c0617a3b00393979023df887dfb207655a3487ac0b7e0c"
         ),
         .target(
             name: "\(packageName)Common",
